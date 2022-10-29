@@ -51,7 +51,7 @@ fn main() {
         .into_iter()
         .filter(|s| s.contains('h'))
         .map(|s| s.to_uppercase())
-        .collect(); // do the stuff here
+        .collect();
     println!("Transformed: {:?}", transformed);
 
     // Challenge:
