@@ -22,7 +22,7 @@ pub enum DolphinError {
     Hungry,
     #[error("The dolphin is too young.")]
     TooYoung,
-    #[error("The dolphin's is too long and annoying to say.")]
+    #[error("The dolphin's name is too long and annoying to say.")]
     LongName,
 }
 

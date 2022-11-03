@@ -1,6 +1,6 @@
 // START IN lib.rs!
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use aquarium::Dolphin;
 // Silence some warnings so they don't distract from the exercise.
 #[allow(clippy::vec_init_then_push)]
@@ -56,7 +56,7 @@ fn main() -> Result<()> {
         // main(), which will end the program at the first error. anyhow's Result will take care of
         // formatting the error output for us.
 
-        play_time(dolphin)?;
+        play_time(dolphin).context("playtime didn't go well")?;
         // match play_time(dolphin) {
         //     Ok(responses) => {
         //         println!("{} did a FABULOUS PERFORMANCE!", dolphin.name);
